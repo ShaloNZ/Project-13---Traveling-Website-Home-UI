@@ -73,130 +73,108 @@
             <div class="col-12 position-relative">
                 <div class="row">
 
+                    <!-- Owl Carousel -->
                     <div class="owl-carousel-div">
                         <div class="owl-carousel owl-theme">
-
                             <!-- Image 01 -->
                             <div class="item" style="background-image: url('/res/hero-section-image-1.jpg');">
                             </div>
-
                             <!-- Image 02 -->
                             <div class="item" style="background-image: url('/res/hero-section-image-2.jpg');">
                             </div>
-
                             <!-- Image 03 -->
                             <div class="item" style="background-image: url('/res/hero-section-image-3.jpg');">
                             </div>
                         </div>
                     </div>
-
-                    <!-- details bar Bar -->
-                    <div class="col-12 searchdiv position-absolute rounded-5 d-none d-lg-block"
-                        style="z-index:5; top: 0; margin-top:200px;">
-
+        
+                    <!-- Details Bar -->
+                    <div class="col-12 d-none d-lg-block" style="position: absolute; z-index: 100; margin-top: 200px;">
                         <div class="row">
-
-                            <div class="col-12 d-flex justify-content-around">
-                                <div class="row">
-                                    <div class="text-white d-flex gap-2">
-                                        <h1 class="fw-bold"> Discover The</h1>
-                                        <h1 class="fw-bold" style="color: orange;">Pearl</h1>
-                                    </div>
-                                    <div class="text-white">
-                                        <h1 class="fw-bold">
-                                            of The Indian Ocean
-                                        </h1>
-                                    </div>
-                                    <div class="text-white">
-                                        <span class="text-white" style=" margin-top: 10px; display: block;">
-                                            Experience the beauty and tranquility of the Indian Ocean with our exclusive
-                                            tours and
-                                            packages. Whether you're looking for adventure or relaxation, we have
-                                            something for
-                                            everyone.
-                                        </span>
-                                    </div>
+                            <div class="col-md-8 offset-md-1  p-3">
+                                <div class="text-white d-flex gap-2">
+                                    <h1 class="fw-bold" style="font-size: 100px;">Discover The</h1>
+                                    <h1 class="fw-bold" style="color: orange; font-size: 100px;">Pearl</h1>
                                 </div>
-
-                                <div class=" row justify-content-end text-white">
-                                    <i id="weather-icon" class="weather-icon"></i>
-                                    <p id="weather-temp" class="weather-temp"></p>
-                                    <p id="weather-description" class="weather-description"></p>
+                                <div class="text-white">
+                                    <h1 class="fw-bold" style="font-size: 100px;">of The Indian Ocean</h1>
+                                </div>
+                                <div class="text-white">
+                                    <span style="font-size: 24px;">
+                                        Experience the beauty and tranquility of the Indian Ocean with our exclusive
+                                        tours and
+                                        packages. Whether you're looking for adventure or relaxation, we have something
+                                        for
+                                        everyone.
+                                    </span>
                                 </div>
                             </div>
 
+                            <div class="col-md-2 p-3 text-end text-white">
+                                <i id="weather-icon" class="weather-icon"></i>
+                                <p id="weather-temp" class="weather-temp"></p>
+                                <p id="weather-description" class="weather-description"></p>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Search Bar -->
-                    <div class=" col-12 searchdiv position-absolute rounded-5 mb-5" style="z-index:5; bottom: 0;">
-                        <div class=" row justify-content-center">
-                            <div class=" col-11 mt-5 py-2 bg-white rounded rounded-5 border border-2">
-                                <div class=" row justify-content-center">
-                                    <div class="selector-container col-12 col-lg-3">
+                    <div class="col-12 searchdiv position-absolute rounded-5 mb-5" style="z-index: 5; bottom: 0;">
+                        <div class="row justify-content-center">
+                            <div class="col-11 mt-5 py-2 bg-white rounded-5 border border-2">
+                                <div class="row justify-content-center">
+                                    <div class="selector-container col-12 col-lg-3 mb-3 mb-lg-0">
                                         <label class="selector-label mx-5" for="category">Tours</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text bg-transparent border-0">🏷️</span>
                                             </div>
-                                            <select id="category" class=" form-select">
+                                            <select id="category" class="form-select">
                                                 <option value="">Select Tours</option>
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-lg-2">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <label for="date">Price</label>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="input-group">
-                                                    <input class="form-control" placeholder="Min" />
-
-                                                </div>
-                                            </div>
-
-                                            <div class="col-6">
-                                                <div class="input-group">
-                                                    <input class="form-control" placeholder="Max" />
-                                                </div>
-                                            </div>
+                                    <div class="col-12 col-lg-2 mb-3 mb-lg-0">
+                                        <label for="price">Price</label>
+                                        <div class="input-group">
+                                            <input class="form-control" placeholder="Min" />
+                                            <input class="form-control" placeholder="Max" />
                                         </div>
                                     </div>
-                                    <div class="selector-container col-12 col-lg-3">
+                                    <div class="selector-container col-12 col-lg-3 mb-3 mb-lg-0">
                                         <label class="selector-label mx-5" for="date">Date</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <span class="input-group-text  bg-transparent border-0">📅</span>
+                                                <span class="input-group-text bg-transparent border-0">📅</span>
                                             </div>
                                             <select id="date" class="form-select">
                                                 <option value="">Select Date</option>
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="selector-container col-12 col-lg-2">
-                                        <label class="selector-label mx-5" for="date">Type</label>
+                                    <div class="selector-container col-12 col-lg-2 mb-3 mb-lg-0">
+                                        <label class="selector-label mx-5" for="type">Type</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <span class="input-group-text  bg-transparent border-0">📅</span>
+                                                <span class="input-group-text bg-transparent border-0">📅</span>
                                             </div>
-                                            <select id="date" class="form-select">
+                                            <select id="type" class="form-select">
                                                 <option value="">Select Type</option>
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-lg-2 d-grid mt-3 mt-lg-0
-                                     ">
-                                        <button class=" btn btn-primary rounded rounded-5"><i
-                                                class="bi bi-search mx-2"></i>Search</button>
+                                    <div class="col-12 col-lg-2 d-grid mt-3 mt-lg-0">
+                                        <button class="btn btn-primary rounded-5">
+                                            <i class="bi bi-search mx-2"></i>Search
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- WhatApp -->
-                    <div class="col-12 d-flex justify-content-end position-fixed bottom-0 p-3" style="z-index:100;">
+                    <!-- WhatsApp -->
+                    <div class="col-12 d-flex justify-content-end position-fixed bottom-0 p-3" style="z-index: 100;">
                         <img src="/res/whatappIcon.png" />
                     </div>
 
@@ -248,39 +226,40 @@
 
                                     <div class="col-4">
                                         <div class="owl-carousel">
-                                            <img src="/res/popular destinations-1.jpg"
+                                            <img src="/res/popular destinations-1.jpg" class="rounded-4"
                                                 style="width: 100%; height:100%;">
-                                            <img src="/res/popular destinations-2.jpg"
+                                            <img src="/res/popular destinations-2.jpg" class="rounded-4"
                                                 style="width: 100%; height:100%;">
-                                            <img src="/res/popular destinations-3.jpg"
-                                                style="width: 100%; height:100%;">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-4">
-                                        <div class="owl-carousel">
-                                            <img src="/res/popular destinations-3.jpg"
-                                                style="width: 100%; height:100%;">
-                                            <img src="/res/popular destinations-2.jpg"
-                                                style="width: 100%; height:100%;">
-                                            <img src="/res/popular destinations-1.jpg"
+                                            <img src="/res/popular destinations-3.jpg" class="rounded-4"
                                                 style="width: 100%; height:100%;">
                                         </div>
                                     </div>
 
                                     <div class="col-4">
                                         <div class="owl-carousel">
-                                            <img src="/res/popular destinations-2.jpg"
+                                            <img src="/res/popular destinations-3.jpg" class="rounded-4"
                                                 style="width: 100%; height:100%;">
-                                            <img src="/res/popular destinations-3.jpg"
+                                            <img src="/res/popular destinations-2.jpg" class="rounded-4"
                                                 style="width: 100%; height:100%;">
-                                            <img src="/res/popular destinations-1.jpg"
+                                            <img src="/res/popular destinations-1.jpg" class="rounded-4"
+                                                style="width: 100%; height:100%;">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-4">
+                                        <div class="owl-carousel">
+                                            <img src="/res/popular destinations-2.jpg" class="rounded-4"
+                                                style="width: 100%; height:100%;">
+                                            <img src="/res/popular destinations-3.jpg" class="rounded-4"
+                                                style="width: 100%; height:100%;">
+                                            <img src="/res/popular destinations-1.jpg" class="rounded-4"
                                                 style="width: 100%; height:100%;">
                                         </div>
                                     </div>
 
                                 </div>
                             </div>
+
 
                         </div>
                     </div>
@@ -297,31 +276,51 @@
                             </div>
 
                             <!-- Message -->
-                            <div class="col-12 mt-3 d-flex justify-content-between align-items-center">
+                            <div class="col-12 mt-3 d-flex justify-content-between align-items-center gap-5">
 
-                                <img src="/res/Welcome-to-Sri-Lanka.png" class="d-none d-lg-block" />
+                                <img src="/res/photo_2024-07-29_21-23-27.jpg" class="d-none d-lg-block rounded-4"
+                                    style="height: 500px; width: auto;" />
 
-                                <div class="text-center text-lg-end">
-                                    <p class="mt-3">Embark on unforgettable journeys with us! At [Your Travel Agency
-                                        Name],
-                                        we’re
-                                        dedicated to turning your travel dreams into reality. Whether you're
-                                        planning a
-                                        relaxing beach getaway, an adventurous trek, or a cultural exploration,
-                                        our
-                                        expert
-                                        team is here to guide you every step of the way.
+                                <div class="text-center text-lg-start">
+                                    <p class="mt-3 fs-5">
+                                        Ayubowan! We warmly welcome you to Sri Lanka, a land of breathtaking beauty,
+                                        rich cultural heritage, and unparalleled hospitality. Nestled in the heart of
+                                        the Indian Ocean, our island nation is a paradise waiting to be explored,
+                                        offering an array of experiences that promise to leave you enchanted.
 
-                                        ✨ Our Promise: To deliver personalized travel experiences that exceed
-                                        your
-                                        expectations.
-                                        ✨ Our Expertise: In-depth knowledge, exclusive offers, and exceptional
-                                        service to
-                                        make your travel hassle-free and memorable.
+                                        As you embark on your journey across Sri Lanka, you'll discover a mosaic of
+                                        vibrant landscapes, from pristine beaches with golden sands to lush tea
+                                        plantations that blanket our hill country. The diversity of our natural scenery
+                                        is matched only by the warmth of our people, who are eager to share the wonders
+                                        of their homeland with you.
 
-                                        Explore, dream, and discover with us. Let’s start planning your next
-                                        adventure
-                                        today!
+                                        Sri Lanka's rich history spans over 2,500 years, and this is reflected in our
+                                        ancient cities, magnificent temples, and timeless traditions. Explore the sacred
+                                        city of Anuradhapura, the marvels of Sigiriya’s rock fortress, and the serene
+                                        beauty of the Temple of the Tooth in Kandy. Each site tells a story of a bygone
+                                        era, offering glimpses into the island’s profound cultural tapestry.
+
+                                        Our culinary delights are sure to tantalize your taste buds. From the fiery
+                                        flavors of local curries to the delicate nuances of seafood fresh from our
+                                        coastal waters, Sri Lankan cuisine is a feast for the senses. Don't miss the
+                                        chance to savor a traditional rice and curry meal or enjoy a cup of
+                                        world-renowned Ceylon tea amidst the picturesque plantations where it is grown.
+
+                                        Adventure seekers will find no shortage of thrilling activities. Whether it's
+                                        surfing the waves at Arugam Bay, embarking on a wildlife safari in Yala National
+                                        Park, or trekking through the misty highlands of Ella, there's something for
+                                        every explorer.
+
+                                        As you travel through our island, you'll be met with smiles and the genuine
+                                        hospitality that Sri Lanka is famous for. Our people take immense pride in
+                                        welcoming visitors and ensuring your stay is as comfortable and memorable as
+                                        possible.
+
+                                        We invite you to immerse yourself in the charm and beauty of Sri Lanka. May your
+                                        journey be filled with unforgettable moments, new friendships, and a deeper
+                                        appreciation for the wonders of our extraordinary country.
+
+                                        Welcome to Sri Lanka. We hope you have a magical stay.
                                     </p>
                                 </div>
 
@@ -854,32 +853,30 @@
             </div>
 
             <!-- header -->
-            <header class="py-2 bg-transparent fixed-top ">
-                <div class="container d-flex align-items-center justify-content-between">
-                    <div class="header-logo col-3" style="margin-left: -80px;">
-                        <img src="./res/Tccc.png" alt="Logo" class="">
-                    </div>
-                    <nav class="navbar navbar-expand-lg navbar-light col-6 d-none d-lg-block">
-                        <div class="container-fluid justify-content-center">
-                            <div class="navbar-nav g-5">
-                                <a class="nav-link headrlink" href="/princess-dresses/">Home</a>
-                                <a class="nav-link headrlink" href="/princess-dresses/apparel/">About Us</a>
-                                <a class="nav-link headrlink" href="/princess-dresses/homeware/">Tours Page</a>
-                                <a class="nav-link headrlink" href="/princess-dresses/accessories/">Destinations</a>
-                                <a class="nav-link headrlink" href="/princess-dresses/accessories/">Conatct Us</a>
-                            </div>
+            <div id="header" class="col-12 bg-transparent fixed-top">
+                <div class="row">
+                    <div class="col-md-10 offset-md-1 d-flex justify-content-between align-items-center">
+                        <div class="header-logo col-3" style="margin-left: -80px;">
+                            <img src="./res/Tccc.png" alt="Logo">
                         </div>
-                    </nav>
-                    <div class="d-flex align-items-center col-3 offset-6 offset-lg-0">
-                        <button class=" btn btn-light d-none d-lg-block" id="scrolled-headerbtn">Contact Us</button>
-                        <button class="btn btn-light border border-0 d-lg-none" style="cursor: pointer;"
-                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
-                            aria-controls="offcanvasExample">
-                            <img src="./res/icons8-menu-50.png" alt="" style="width: 25px;">
-                        </button>
+                        <nav class="navbar navbar-expand-lg navbar-light col-6 d-none d-lg-block">
+                            <div class="container-fluid justify-content-center">
+                                <div class="navbar-nav g-5">
+                                    <a class="nav-link headrlink fs-4" href="/princess-dresses/">Home</a>
+                                    <a class="nav-link headrlink fs-4" href="/princess-dresses/apparel/">About Us</a>
+                                    <a class="nav-link headrlink fs-4" href="/princess-dresses/homeware/">Tours Page</a>
+                                    <a class="nav-link headrlink fs-4"
+                                        href="/princess-dresses/accessories/">Destinations</a>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="row text-end">
+                            <label class="text-white fs-4">Contact Us</label>
+                            <label style="color: orange;" class="fs-5">071 112 3331</label>
+                        </div>
                     </div>
                 </div>
-            </header>
+            </div>
 
             <!-- side menu -->
             <div class="offcanvas offcanvas-start bg-opacity-50" tabindex="-1" id="offcanvasExample"
@@ -926,12 +923,14 @@
                                 <div class="row">
                                     <label for="" class=" form-label text-wite">Email</label>
                                     <input type="text" class=" form-control"
-                                        style="background-color: rgb(250, 229, 189); opacity: 75%; height: 50px;" placeholder="Type your email here...">
+                                        style="background-color: rgb(250, 229, 189); opacity: 75%; height: 50px;"
+                                        placeholder="Type your email here...">
                                 </div>
                             </div>
 
                             <div class="col-4 d-flex justify-content-end align-items-center">
-                                <button class=" button-type-1 pt-3 pb-3" style="background-color: white; color: orange;">Subcribe</button>
+                                <button class=" button-type-1 pt-3 pb-3"
+                                    style="background-color: white; color: orange;">Subcribe</button>
                             </div>
 
                         </div>

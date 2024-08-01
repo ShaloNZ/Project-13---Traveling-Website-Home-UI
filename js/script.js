@@ -9,19 +9,19 @@ window.onload = function () {
 
 
 document.addEventListener('scroll', function () {
-  const header = document.querySelector('header');
-  const btn = document.getElementById("scrolled-headerbtn");
+  const header = document.getElementById('header');
+  // const btn = document.getElementById("scrolled-headerbtn");
 
   if (window.scrollY > 50) {
 
     header.classList.add('scrolled-header');
-    btn.classList.add('scrolled-headerbtn');
+    // btn.classList.add('scrolled-headerbtn');
     header.classList.remove('bg-transparent');
     btn.classList.remove('btn');
     btn.classList.remove('btn-light');
   } else {
     header.classList.remove('scrolled-header');
-    btn.classList.remove('scrolled-headerbtn');
+    // btn.classList.remove('scrolled-headerbtn');
     header.classList.add('bg-transparent');
     btn.classList.add('btn');
     btn.classList.add('btn-light');
