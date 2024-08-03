@@ -17,20 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
-        .weather-icon {
-            font-size: 48px;
-            margin: 20px 0;
-        }
 
-        .weather-temp {
-            font-size: 48px;
-            margin: 10px 0;
-        }
-
-        .weather-description {
-            font-size: 20px;
-            text-transform: capitalize;
-        }
     </style>
 
 </head>
@@ -125,19 +112,24 @@
                     <div class="owl-carousel-div">
                         <div class="owl-carousel owl-theme">
                             <!-- Image 01 -->
-                            <div class="item" style="background-image: url('/res/home-slider/home_main_1.jpg');">
+                            <div class="item owl-carousel-item"
+                                style="background-image: url('/res/home-slider/home_main_1.jpg');">
                             </div>
                             <!-- Image 02 -->
-                            <div class="item" style="background-image: url('/res/home-slider/home_main_2.jpg');">
+                            <div class="item owl-carousel-item"
+                                style="background-image: url('/res/home-slider/home_main_2.jpg');">
                             </div>
                             <!-- Image 03 -->
-                            <div class="item" style="background-image: url('/res/home-slider/home_main_3.jpg');">
+                            <div class="item owl-carousel-item"
+                                style="background-image: url('/res/home-slider/home_main_3.jpg');">
                             </div>
                             <!-- Image 04 -->
-                            <div class="item" style="background-image: url('/res/home-slider/home_main_4.jpg');">
+                            <div class="item owl-carousel-item"
+                                style="background-image: url('/res/home-slider/home_main_4.jpg');">
                             </div>
                             <!-- Image 05 -->
-                            <div class="item" style="background-image: url('/res/home-slider/home_main_5.jpg');">
+                            <div class="item owl-carousel-item"
+                                style="background-image: url('/res/home-slider/home_main_5.jpg');">
                             </div>
                         </div>
                     </div>
@@ -242,80 +234,53 @@
             <div class="col-md-10 offset-md-1">
                 <div class="row">
 
-                    <!-- Popular destination -->
+                    <!-- Popular Destination -->
                     <div class="col-12">
                         <div class="row">
-
-                            <!-- card -->
+                            <!-- Card -->
                             <div class="col-md-5 mt-5">
-                                <div class="card row p-4 rounded-2 border-0" style="background-color:orange;">
-
-                                    <div class="row mt-2">
-                                        <h1 class="text-white">Popular</h1>
-                                        <h1 class="text-white">Destinations</h1>
+                                <div class="card p-4 rounded-2 border-0" style="background-color: orange;">
+                                    <div class="card-content">
+                                        <div>
+                                            <h1 class="text-white">Popular</h1>
+                                            <h1 class="text-white">Destinations</h1>
+                                            <p class="text-white mt-4">
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry. Lorem Ipsum
+                                                has been the industry's standard dummy text ever since the 1500s, when
+                                                an unknown
+                                                printer took a galley of type and scrambled it.
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-light mb-5">View More&nbsp;<i
+                                                    class="bi bi-arrow-right"></i></button>
+                                        </div>
                                     </div>
-
-                                    <div class=" text-white mt-5 mb-5">
-                                        <label>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                            industry. Lorem
-                                            Ipsum
-                                            has
-                                            been the industry's standard dummy text ever since the 1500s, when an
-                                            unknown
-                                            printer took a
-                                            galley of type and scrambled
-                                        </label>
-                                    </div>
-
-                                    <div>
-                                        <button class="btn btn-light mb-5">View More&nbsp;
-                                            <i class="bi bi-arrow-right"></i>
-                                        </button>
-                                    </div>
-
                                 </div>
                             </div>
 
-                            <!-- carousel -->
+                            <!-- Carousel -->
                             <div class="col-md-7 mt-5">
-                                <div class="row">
-
-                                    <div class="col-4">
-                                        <div class="owl-carousel">
-                                            <img src="/res/popular destinations-1.jpg" class="rounded-4"
-                                                style="width: 100%; height:100%;">
-                                            <img src="/res/popular destinations-2.jpg" class="rounded-4"
-                                                style="width: 100%; height:100%;">
-                                            <img src="/res/popular destinations-3.jpg" class="rounded-4"
-                                                style="width: 100%; height:100%;">
-                                        </div>
+                                <div class="owl-carousel owl-carousel-2">
+                                    <div class="item">
+                                        <img src="/res/hero-section-image-1.jpg" alt="Destination 1" />
                                     </div>
-
-                                    <div class="col-4">
-                                        <div class="owl-carousel">
-                                            <img src="/res/popular destinations-3.jpg" class="rounded-4"
-                                                style="width: 100%; height:100%;">
-                                            <img src="/res/popular destinations-2.jpg" class="rounded-4"
-                                                style="width: 100%; height:100%;">
-                                            <img src="/res/popular destinations-1.jpg" class="rounded-4"
-                                                style="width: 100%; height:100%;">
-                                        </div>
+                                    <div class="item">
+                                        <img src="/res/popular destinations-2.jpg" alt="Destination 2" />
                                     </div>
-
-                                    <div class="col-4">
-                                        <div class="owl-carousel">
-                                            <img src="/res/popular destinations-2.jpg" class="rounded-4"
-                                                style="width: 100%; height:100%;">
-                                            <img src="/res/popular destinations-3.jpg" class="rounded-4"
-                                                style="width: 100%; height:100%;">
-                                            <img src="/res/popular destinations-1.jpg" class="rounded-4"
-                                                style="width: 100%; height:100%;">
-                                        </div>
+                                    <div class="item">
+                                        <img src="/res/popular destinations-3.jpg" alt="Destination 3" />
                                     </div>
-
+                                    <div class="item">
+                                        <img src="/res/popular destinations-1.jpg" alt="Destination 4" />
+                                    </div>
+                                    <div class="item">
+                                        <img src="/res/popular destinations-2.jpg" alt="Destination 5" />
+                                    </div>
+                                    <!-- Add more items as needed -->
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
@@ -1040,42 +1005,9 @@
                 document.getElementById('weather-temp').innerText = 'N/A';
                 document.getElementById('weather-description').innerText = 'Error fetching weather data.';
             });
+    </script>
 
-        // Owl Carousel
-        $(document).ready(function () {
-            $(".owl-carousel").owlCarousel({
-                items: 1,
-                loop: true,
-                nav: false,
-                dots: false,
-                autoplay: true,
-                autoplayTimeout: 5000,
-                autoplayHoverPause: true
-            });
-        });
-
-        $(document).ready(function () {
-            $(".owl-carousel").owlCarousel({
-                items: 3, // Number of items to show
-                loop: true, // Infinite loop
-                margin: 10, // Space between items
-                nav: true, // Show navigation arrows
-                dots: false, // Hide pagination dots
-                slideBy: 3, // Number of items to move on navigation
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 2
-                    },
-                    1000: {
-                        items: 3
-                    }
-                }
-            });
-        });
-
+    <script>
         // Map Marker
         const marker = document.getElementById('marker');
 
@@ -1101,6 +1033,73 @@
                     marker.style.top = pos.top;
                     marker.style.left = pos.left;
                     marker.style.display = 'block';
+                }
+            });
+        });
+    </script>
+
+    <!-- poplar destination -->
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel-2").owlCarousel({
+                items: 3,
+                loop: true,
+                margin: 10,
+                nav: true,
+                dots: false,
+                slideBy: 3,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    }
+                }
+            });
+        });
+
+    </script>
+
+    <!-- hero section -->
+    <script>
+        // Owl Carousel
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                items: 1,
+                loop: true,
+                nav: false,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true
+            });
+        });
+
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                items: 3,
+                loop: true,
+                margin: 10,
+                nav: true,
+                dots: false,
+                slideBy: 3,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    }
                 }
             });
         });
