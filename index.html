@@ -18,117 +18,77 @@
 
 <body>
 
-    <div class="container
+
+    <!-- Mobile Side Menu -->
+    <div class="container-fluid">
+        <div class="row">
+
+            <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                aria-controls="offcanvasExample">
+                Link with href
+            </a>
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                aria-controls="offcanvasExample">
+                Button with data-bs-target
+            </button>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div>
+                        Some text as placeholder. In real life you can have the elements you have chosen. Like,
+                        text, images, lists, etc.
+                    </div>
+                    <div class="dropdown mt-3">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown">
+                            Dropdown button
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Header Menu -->
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12 d-flex justify-content-between">
+                <div class="row">
+
+                    <!-- Logo Div -->
+                    <div>
+                        <img src="/assets/image/logo/logo-image.png" class="logo-image" />
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 
 
 
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/open-weather-icons/0.0.1/js/open-weather-icons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-
-
-    <!-- Script -->
-    <script src=" /js/script.js">
-        </script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/open-weather-icons/0.0.1/js/open-weather-icons.js"></script>
-
-        <script>
-            // Weather API
-            const apiKey = 'e76b01347482c2f3c89ffaaa361f223d';
-            const city = 'Colombo';
-            const country = 'LK';
-            const apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${apiKey}&units=metric`;
-
-            fetch(apiUrl)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.cod === 200) {
-                        const temp = data.main.temp;
-                        const weatherDescription = data.weather[0].description;
-                        const weatherIcon = data.weather[0].icon;
-
-                        document.getElementById('weather-temp').innerText = `${temp}°C`;
-                        document.getElementById('weather-description').innerText = weatherDescription;
-                        document.getElementById('weather-icon').classList.add(`owf-${weatherIcon}`);
-                    } else {
-                        document.getElementById('weather-temp').innerText = 'N/A';
-                        document.getElementById('weather-description').innerText = 'Unable to fetch weather data.';
-                    }
-                })
-                .catch(error => {
-                    console.error('Error fetching weather data:', error);
-                    document.getElementById('weather-temp').innerText = 'N/A';
-                    document.getElementById('weather-description').innerText = 'Error fetching weather data.';
-                });
-
-            // Owl Carousel
-            $(document).ready(function () {
-                $(".owl-carousel").owlCarousel({
-                    items: 1,
-                    loop: true,
-                    nav: false,
-                    dots: false,
-                    autoplay: true,
-                    autoplayTimeout: 5000,
-                    autoplayHoverPause: true
-                });
-            });
-
-            $(document).ready(function () {
-                $(".owl-carousel").owlCarousel({
-                    items: 3, // Number of items to show
-                    loop: true, // Infinite loop
-                    margin: 10, // Space between items
-                    nav: true, // Show navigation arrows
-                    dots: false, // Hide pagination dots
-                    slideBy: 3, // Number of items to move on navigation
-                    responsive: {
-                        0: {
-                            items: 1
-                        },
-                        600: {
-                            items: 2
-                        },
-                        1000: {
-                            items: 3
-                        }
-                    }
-                });
-            });
-
-            // Map Marker
-            const marker = document.getElementById('marker');
-
-            const locations = {
-                'jafna1': { top: '20%', left: '30%' },
-                'gampaha1': { top: '40%', left: '40%' },
-                'gampaha2': { top: '45%', left: '42%' },
-                'colombo1': { top: '60%', left: '60%' },
-                'jafna2': { top: '22%', left: '32%' },
-                'gampaha3': { top: '47%', left: '45%' },
-                'gampaha4': { top: '50%', left: '48%' },
-                'colombo2': { top: '65%', left: '62%' },
-                'gampaha5': { top: '55%', left: '50%' },
-                'colombo3': { top: '70%', left: '65%' }
-            };
-
-            document.querySelectorAll('button').forEach(button => {
-                button.addEventListener('click', () => {
-                    const location = button.getAttribute('data-location');
-                    const pos = locations[location];
-
-                    if (pos) {
-                        marker.style.top = pos.top;
-                        marker.style.left = pos.left;
-                        marker.style.display = 'block';
-                    }
-                });
-            });
-        </script>
 </body>
 
 </html>
