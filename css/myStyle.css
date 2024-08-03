@@ -143,11 +143,11 @@
     height: 400px;
 }
 
-.card {
+.popular-destination-card {
     height: 400px;
 }
 
-.card-content {
+.popular-destination-card-content {
     height: 100%;
     display: flex;
     flex-direction: column;
