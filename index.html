@@ -36,25 +36,19 @@
                     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
                         aria-labelledby="offcanvasExampleLabel">
                         <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                            <h5 class="offcanvas-title" id="offcanvasExampleLabel">One Tours Travel</h5>
                             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                                 aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body">
-                            <div>
-                                Some text as placeholder. In real life you can have the elements you have chosen. Like,
-                                text, images, lists, etc.
-                            </div>
-                            <div class="dropdown mt-3">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                    data-bs-toggle="dropdown">
-                                    Dropdown button
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
+                            <div class="row g-4">
+
+                                <div class="col-12"><label class="form-label">Home</label></div>
+                                <div class="col-12"><label class="form-label">About Us</label></div>
+                                <div class="col-12"><label class="form-label">Tour Page</label></div>
+                                <div class="col-12"><label class="form-label">Elephant Conversion</label></div>
+                                <div class="col-12"><label class="form-label">Conversion</label></div>
+
                             </div>
                         </div>
                     </div>
@@ -83,10 +77,11 @@
                             </div>
 
                             <!-- Page -->
-                            <div class="d-flex d-none d-lg-block fs-4">
+                            <div class="d-flex d-none d-lg-block fs-5">
                                 <label class="ms-5">Home</label>
                                 <label class="ms-5">About Us </label>
                                 <label class="ms-5">Tours Page</label>
+                                <label class="ms-5">Elephant Conversion</label>
                                 <label class="ms-5">Destinations</label>
                             </div>
 
@@ -160,7 +155,11 @@
                                 <i id="weather-icon" class="weather-icon"></i>
                                 <p id="weather-temp" class="weather-temp"></p>
                                 <p id="weather-description" class="weather-description"></p>
+
+                                <p class="weather-temp fs-1" id="dateTime"></p>
+
                             </div>
+
                         </div>
                     </div>
 
@@ -292,8 +291,8 @@
                             <!-- Title -->
                             <div class="col-12 mt-5">
                                 <h1 style="font-size: 80px; color: lightseagreen;">ආයුබෝවන්</h1>
-                                <h1 style="font-size: 50px; color: lightseagreen;">Welcome
-                                    <span style="color: orange;">To One Tour Travel</span>
+                                <h1 style="font-size: 50px; color: lightseagreen;">Welcome To
+                                    <span style="color: orange;"> One Tours Travel</span>
                                 </h1>
                             </div>
 
@@ -342,8 +341,8 @@
                         <div class="row">
 
                             <div class="col-12">
-                                <h1 style="font-size: 50px; color: lightseagreen;">Top <span
-                                        style="color: orange;">Destinations</span>
+                                <h1 style="font-size: 50px; color: lightseagreen;">Things <span
+                                        style="color: orange;">To Do</span>
                                 </h1>
                             </div>
 
@@ -916,6 +915,7 @@
                                         <i class="fa-brands fa-tiktok fs-5"></i>
                                         <i class="fa-solid fa-envelope fs-5"></i>
                                         <i class="fa-brands fa-whatsapp fs-5"></i>
+                                        <i class="fa-brands fa-youtube fs-5"></i>
                                     </div>
                                 </div>
                             </div>
@@ -1104,6 +1104,26 @@
                 }
             });
         });
+    </script>
+
+    <!-- Current Date time -->
+    <script>
+        function updateDateTime() {
+            const dateTimeElement = document.getElementById('dateTime');
+            const now = new Date();
+            let hours = now.getHours();
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 12; // the hour '0' should be '12'
+            const formattedTime = `${hours.toString().padStart(2, '0')}:${minutes}:${seconds} ${ampm}`;
+            dateTimeElement.textContent = formattedTime;
+        }
+
+        setInterval(updateDateTime, 1000);
+
+        updateDateTime();
     </script>
 
 </body>
